@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shareapp</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', href: 'http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if notice %>
+      <div id="notification-wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif alert %>
+      <div id="notification-wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+    <header>
+      <div id="logo">
+        <h1><%= link_to "Share Ideas", root_path %></h1>
+      </div>
+
+      <nav>
+        <%= link_to "All Ideas", ideas_path %>
+        <% if user_signed_in? %>
+          <%= link_to "New Idea", new_idea_path %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+        <% end %>
+      </nav>
+    </header>
+
+    <%= yield %>
+    
+  </body>
+</html>

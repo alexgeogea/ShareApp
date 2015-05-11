@@ -1,0 +1,19 @@
+<div class="body-wrapper">
+	<div class="idea-wrapper clearfix">
+		<h2 class="idea-title"><%= @idea.title %></h2>
+		<p class="date">Submitted by <span><%= @idea.user.name %></span></p>
+		<% if current_user == @idea.user %>
+			<div class="links">
+				<%= link_to "Edit", edit_idea_path(@idea) %>
+				<%= link_to "Delete", idea_path(@idea), method: :delete, data: { confirm: "Are you sure you want to delete your idea?" } %>
+			</div>
+		<% end %>
+		<p class="content"><%= simple_format(@idea.content) %></p>
+	</div>
+
+	<h4><%= pluralize(@idea.comments.count, "comment") %></h4>
+	<%= render @idea.comments %>
+
+	<h4>Add a comment</h4>
+	<%=	render 'comments/form' %>
+</div>

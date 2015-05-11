@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ *= require_self
+ */
+ 
+@import "normalize";
+@import "ideas";
+@import "comments";
+@import "welcome";
+
+html, body { 
+	font-family: 'Raleway';
+}
+
+body {
+	background: -webkit-linear-gradient(90deg, #085078 10%, #85D8CE 90%); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(90deg, #085078 10%, #85D8CE 90%); /* FF3.6+ */
+	background:     -ms-linear-gradient(90deg, #085078 10%, #85D8CE 90%); /* IE10 */
+	background:      -o-linear-gradient(90deg, #085078 10%, #85D8CE 90%); /* Opera 11.10+ */
+	background:         linear-gradient(90deg, #085078 10%, #85D8CE 90%); /* W3C */
+}
+
+h2, h3, h4, h5, h6 {
+	color: #085078;
+	font-family: sans-serif;
+}
+
+p {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.6);
+	line-height: 1.5;
+	font-weight: 600;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* --Header -- */
+
+#notification-wrapper {
+	position:absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	background: rgba(8, 80, 120, 0.6);
+	height: 60px;
+	.notice, .alert {
+		text-align: center;
+		color: #fff;
+		font-weight: 600;
+	}
+}
+
+header {
+	height: 60px;
+	background: transparent;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	#logo {
+		float: left;
+		margin: 0px 0px 0px 30px;
+		h1 {
+			margin-top: 15px;
+			a {
+				font-weight: 700;
+				color: #fff;
+				letter-spacing: -2px;
+				line-height: 1;
+				text-decoration: none;
+				display: block;
+			}
+		}
+	}
+	nav {
+		float: right;
+		margin: 20px 30px 0px 0px;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: rgba(250, 250, 250, 0.8);
+			font-size: 16px;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-left: 20px;
+			&:hover {
+				color: #fff;
+			}
+		}
+		span {
+			font-size: 14px;
+			font-style: italic;
+			color: rgba(250, 250, 250, 0.8);
+		}
+	}
+}
+
+
+.body-wrapper {
+	display: block; 
+	max-width: 550px; 
+	width: 100%;
+	margin: 60px auto 50px; 
+	background: #fff; 
+	padding: 10px 30px 30px 30px; 
+	-webkit-border-radius: 4px; 
+	border-radius: 4px; 
+
+}

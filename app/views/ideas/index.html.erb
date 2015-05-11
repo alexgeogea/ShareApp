@@ -1,0 +1,9 @@
+<div class="body-wrapper">
+	<% @ideas.each do |idea| %>
+		<div class="idea-wrapper">
+			<h2><%= link_to idea.title, idea %></h2>
+			<p class="date">Submitted <%= time_ago_in_words(idea.created_at) %> ago by <span><%= idea.user.name %></span> </p>
+			<p class="content"><%= truncate(idea.content, length: 100) %></p>
+		</div>
+	<% end %>
+</div>
