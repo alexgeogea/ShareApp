@@ -46,11 +46,14 @@
 
 .announcement {
 	width: 100%;
+	background: #85D8CE;
+	height: 305px;
+	margin-top: -20px;
 	h2 {
 		color: #fff;
 		text-align: center;
 		margin-bottom: 0px;
-		margin-top: 50px;
+		padding-top: 50px;	
 	}
 	.soon {
 		margin-top: 20px;
@@ -81,6 +84,7 @@ footer {
 	background: rgba(0, 0, 0, 0.8);
 	text-align: center;
 	height: 50px;
+	margin-top: -40px;
 	bottom: 0;
 	clear: both;
 	vertical-align: center;
