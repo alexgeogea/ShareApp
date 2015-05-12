@@ -5,7 +5,7 @@
 .banner {
 	background: url(banner.jpg) center center;
 	background-size: cover;
-	height: 450px;
+	height: 500px;
 	text-align: center;
 	margin-top: -30px;
 	h1 {
@@ -29,5 +29,65 @@
 		&:hover {
 			background: rgba(8, 80, 120, 0.8);
 		}
+	}
+}
+
+.tagline {
+	text-align: center;
+	background: #fff;
+	margin-top: -15px;
+	p {
+		padding: 40px;
+		font-size: 18px;
+		margin-top: 0px;
+		font-weight: 700;
+	}
+}
+
+.announcement {
+	width: 100%;
+	h2 {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 0px;
+		margin-top: 50px;
+	}
+	.soon {
+		margin-top: 20px;
+		width: 30%;
+		float: left;
+		padding: 20px 10px;
+		text-align: center;
+		i {
+			color: #fff;
+			font-size: 36px;
+		}
+		p {
+			color: #fff;
+			font-size: 16px;
+			padding-bottom: 50px;
+		}
+	}
+	#soon-1 {
+		margin-left: 30px;
+	}
+	#soon-2 {
+		margin-right: 30px;
+	} 
+}
+
+footer {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	height: 50px;
+	bottom: 0;
+	clear: both;
+	vertical-align: center;
+	.copyright {
+		padding-top: 20px;
+		color: #fff;
+		font-weight: 700;
+		font-size: 14px;
 	}
 }
