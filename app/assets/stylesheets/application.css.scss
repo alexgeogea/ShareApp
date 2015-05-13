@@ -43,6 +43,13 @@ p {
 	font-weight: 600;
 }
 
+a {
+	text-decoration: none;
+	color: #085078;
+	font-weight: 400; 
+	font-size: 12px;
+}
+
 .clearfix:before, .clearfix:after {
 	content: " ";
 	display: table;
@@ -84,6 +91,7 @@ header {
 				line-height: 1;
 				text-decoration: none;
 				display: block;
+				font-size: 32px;
 			}
 		}
 	}
@@ -110,7 +118,6 @@ header {
 	}
 }
 
-
 .body-wrapper {
 	display: block; 
 	max-width: 550px; 
@@ -120,5 +127,36 @@ header {
 	padding: 10px 30px 30px 30px; 
 	-webkit-border-radius: 4px; 
 	border-radius: 4px; 
+}
 
+/* -- Sign Up form --*/
+
+.form-inputs {
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"] {
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, 0.2); 
+		margin-bottom: 30px;
+		-webkit-border-radius: 4px 4px 4px 4px; 
+		border-radius: 4px 4px 4px 4px; 
+		height: 30px;
+	}
+	label {
+		font-weight: 300; 
+		font-size: 16px; 
+	}
+}
+
+.form-actions {
+	.btn {
+		background-color: #085078; 
+		font-weight: 600; 
+		font-size: 18px; 
+		color: #fff; 
+		padding: 10px 15px; 
+		border: none; 
+		border-radius: 4px; 
+		width: 100%;
+	}
 }
